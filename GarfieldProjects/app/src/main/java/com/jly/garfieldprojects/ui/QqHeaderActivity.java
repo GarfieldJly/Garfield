@@ -16,7 +16,7 @@ import cn.kongnannan.circularavatar.CircularImageView;
  * User: garfield
  * Date: 2016-05-05
  * Time: 17:08
- * Des:
+ * Des: Android 群组头像，仿QQ
  */
 public class QqHeaderActivity extends Activity {
     private CircularImageView mCircularImageView;

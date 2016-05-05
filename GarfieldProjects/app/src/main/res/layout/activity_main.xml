@@ -10,4 +10,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="QqHeaderActivity"/>
+
+    <Button
+        android:id="@+id/EditTextActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EditTextActivity"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/DeleteListViewItemActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DeleteListViewItemActivity"
+        android:layout_marginTop="5dp"/>
+
 </LinearLayout>
