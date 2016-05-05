@@ -1,4 +1,4 @@
-package com.example.administrator.garfieldprojects;
+package com.jly.garfieldprojects;
 
 import org.junit.Test;
 
