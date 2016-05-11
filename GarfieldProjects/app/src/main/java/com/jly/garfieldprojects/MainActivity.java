@@ -12,6 +12,11 @@ import android.widget.Button;
 import com.jly.garfieldprojects.ui.DeleteListViewItemActivity;
 import com.jly.garfieldprojects.ui.EditTextActivity;
 import com.jly.garfieldprojects.ui.QqHeaderActivity;
+import com.jly.garfieldprojects.ui.design.NavigationViewActivity;
+import com.jly.garfieldprojects.ui.design.SideslipActivity;
+import com.jly.garfieldprojects.ui.design.SnackBarViewsActivity;
+import com.jly.garfieldprojects.ui.popupwindow.PopupWindowActivity;
+import com.jly.garfieldprojects.ui.viewpager.ChangeableViewpagerActivity;
 
 public class MainActivity extends Activity implements View.OnClickListener {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -27,6 +32,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ((Button)findViewById(R.id.QqHeaderActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.EditTextActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.DeleteListViewItemActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.SideslipActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.ChangeableViewpagerActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.NavigationViewActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.SnackBarViewsActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.PopupWindowActivityBtn)).setOnClickListener(this);
     }
 
     @Override
@@ -40,6 +50,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.DeleteListViewItemActivityBtn:
                 startActivity(new Intent(MainActivity.this, DeleteListViewItemActivity.class));
+                break;
+            case R.id.SideslipActivityBtn:
+                startActivity(new Intent(MainActivity.this, SideslipActivity.class));
+                break;
+            case R.id.ChangeableViewpagerActivityBtn:
+                startActivity(new Intent(MainActivity.this, ChangeableViewpagerActivity.class));
+                break;
+            case R.id.NavigationViewActivityBtn:
+                startActivity(new Intent(MainActivity.this, NavigationViewActivity.class));
+                break;
+            case R.id.SnackBarViewsActivityBtn:
+                startActivity(new Intent(MainActivity.this, SnackBarViewsActivity.class));
+                break;
+            case R.id.PopupWindowActivityBtn:
+                startActivity(new Intent(MainActivity.this, PopupWindowActivity.class));
                 break;
         }
     }

@@ -25,4 +25,39 @@
         android:text="DeleteListViewItemActivity"
         android:layout_marginTop="5dp"/>
 
+    <Button
+        android:id="@+id/SideslipActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SideslipActivity"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/ChangeableViewpagerActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ChangeableViewpagerActivity"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/NavigationViewActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NavigationViewActivity"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/SnackBarViewsActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SnackBarViewsActivity"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/PopupWindowActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PopupWindowActivity"
+        android:layout_marginTop="5dp"/>
+
 </LinearLayout>
