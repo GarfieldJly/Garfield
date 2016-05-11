@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.jly.garfieldprojects.mediaplayer.MediaplayerActivity;
 import com.jly.garfieldprojects.ui.DeleteListViewItemActivity;
 import com.jly.garfieldprojects.ui.EditTextActivity;
 import com.jly.garfieldprojects.ui.QqHeaderActivity;
@@ -37,6 +38,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ((Button)findViewById(R.id.NavigationViewActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.SnackBarViewsActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.PopupWindowActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.MediaplayerActivityBtn)).setOnClickListener(this);
     }
 
     @Override
@@ -65,6 +67,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.PopupWindowActivityBtn:
                 startActivity(new Intent(MainActivity.this, PopupWindowActivity.class));
+                break;
+            case R.id.MediaplayerActivityBtn:
+                startActivity(new Intent(MainActivity.this, MediaplayerActivity.class));
                 break;
         }
     }

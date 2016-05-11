@@ -60,4 +60,11 @@
         android:text="PopupWindowActivity"
         android:layout_marginTop="5dp"/>
 
+    <Button
+        android:id="@+id/MediaplayerActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MediaplayerActivity"
+        android:layout_marginTop="5dp"/>
+
 </LinearLayout>
