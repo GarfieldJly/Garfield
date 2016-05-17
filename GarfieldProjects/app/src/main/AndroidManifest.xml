@@ -31,6 +31,7 @@
         <activity android:name=".ui.design.SnackBarViewsActivity"/>
         <activity android:name=".ui.popupwindow.PopupWindowActivity"/>
         <activity android:name=".mediaplayer.MediaplayerActivity"/>
+        <activity android:name=".ui.timeselector.lib.TimeSelectorActivity"/>
     </application>
 
 </manifest>

@@ -17,6 +17,7 @@ import com.jly.garfieldprojects.ui.design.NavigationViewActivity;
 import com.jly.garfieldprojects.ui.design.SideslipActivity;
 import com.jly.garfieldprojects.ui.design.SnackBarViewsActivity;
 import com.jly.garfieldprojects.ui.popupwindow.PopupWindowActivity;
+import com.jly.garfieldprojects.ui.timeselector.lib.TimeSelectorActivity;
 import com.jly.garfieldprojects.ui.viewpager.ChangeableViewpagerActivity;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -39,6 +40,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ((Button)findViewById(R.id.SnackBarViewsActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.PopupWindowActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.MediaplayerActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.TimeSelectorActivityBtn)).setOnClickListener(this);
     }
 
     @Override
@@ -70,6 +72,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.MediaplayerActivityBtn:
                 startActivity(new Intent(MainActivity.this, MediaplayerActivity.class));
+                break;
+            case R.id.TimeSelectorActivityBtn:
+                startActivity(new Intent(MainActivity.this, TimeSelectorActivity.class));
                 break;
         }
     }

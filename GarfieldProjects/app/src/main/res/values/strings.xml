@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">GarfieldProjects</string>
     <string name="action_settings">Settings</string>
+
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
 </resources>

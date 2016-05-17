@@ -17,7 +17,8 @@ import com.jly.garfieldprojects.R;
  * @author Jingly
  * @version V1.0
  * @classname: ${FILE_NAME}
- * @description: ${TODO}(用一句话描述该文件做什么)
+ * @description: ${TODO}弹出popupwindow,类似于ActionBar
+ *
  */
 public class PopupWindowActivity extends Activity {
     private TitlePopup titlePopup;
