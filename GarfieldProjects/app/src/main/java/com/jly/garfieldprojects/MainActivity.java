@@ -11,7 +11,10 @@ import android.widget.Button;
 
 import com.jly.garfieldprojects.mediaplayer.MediaplayerActivity;
 import com.jly.garfieldprojects.ui.DeleteListViewItemActivity;
+import com.jly.garfieldprojects.ui.DrawableActivity;
 import com.jly.garfieldprojects.ui.EditTextActivity;
+import com.jly.garfieldprojects.ui.GridLayoutActivity;
+import com.jly.garfieldprojects.ui.LayoutInflaterActivity;
 import com.jly.garfieldprojects.ui.QqHeaderActivity;
 import com.jly.garfieldprojects.ui.design.NavigationViewActivity;
 import com.jly.garfieldprojects.ui.design.SideslipActivity;
@@ -29,6 +32,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         initView();
         retrieveMetaData();
+
+        //每个应用程序最高可用内存是 128M
+        int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);
+        Log.d(TAG, "Max memory is " + maxMemory + "KB");
     }
 
     private void initView(){
@@ -43,6 +50,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ((Button)findViewById(R.id.MediaplayerActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.TimeSelectorActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.TimeSelectorActivity1Btn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.DrawableActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.LayoutInflaterActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.GridLayoutActivityBtn)).setOnClickListener(this);
     }
 
     @Override
@@ -80,6 +90,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.TimeSelectorActivity1Btn:
                 startActivity(new Intent(MainActivity.this, TimeSelectorActivity1.class));
+                break;
+            case R.id.DrawableActivityBtn:
+                startActivity(new Intent(MainActivity.this, DrawableActivity.class));
+                break;
+            case R.id.LayoutInflaterActivityBtn:
+                startActivity(new Intent(MainActivity.this, LayoutInflaterActivity.class));
+                break;
+            case R.id.GridLayoutActivityBtn:
+                startActivity(new Intent(MainActivity.this, GridLayoutActivity.class));
                 break;
         }
     }

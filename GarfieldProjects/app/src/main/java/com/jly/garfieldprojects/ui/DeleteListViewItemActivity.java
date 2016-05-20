@@ -37,6 +37,7 @@ public class DeleteListViewItemActivity extends Activity implements OnClickListe
     private ArrayList<ItemEntity> list;
     private DeleteItemAdapter adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
