@@ -33,9 +33,10 @@
         <activity android:name=".mediaplayer.MediaplayerActivity"/>
         <activity android:name=".ui.timeselector.TimeSelectorActivity"/>
         <activity android:name=".ui.timeselector.TimeSelectorActivity1"/>
-        <activity android:name=".ui.DrawableActivity"/>
+        <activity android:name=".ui.drawable.DrawableActivity"/>
         <activity android:name=".ui.LayoutInflaterActivity"/>
         <activity android:name=".ui.GridLayoutActivity"/>
+        <activity android:name=".ui.refreshlistview.RefreshListViewActivity"/>
     </application>
 
 </manifest>

@@ -104,5 +104,12 @@
             android:layout_height="wrap_content"
             android:text="GridLayoutActivity"
             android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/RefreshListViewActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RefreshListViewActivity"
+            android:layout_marginTop="5dp"/>
     </LinearLayout>
 </ScrollView>

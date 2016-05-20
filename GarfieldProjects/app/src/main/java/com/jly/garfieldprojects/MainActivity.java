@@ -11,7 +11,6 @@ import android.widget.Button;
 
 import com.jly.garfieldprojects.mediaplayer.MediaplayerActivity;
 import com.jly.garfieldprojects.ui.DeleteListViewItemActivity;
-import com.jly.garfieldprojects.ui.DrawableActivity;
 import com.jly.garfieldprojects.ui.EditTextActivity;
 import com.jly.garfieldprojects.ui.GridLayoutActivity;
 import com.jly.garfieldprojects.ui.LayoutInflaterActivity;
@@ -19,7 +18,9 @@ import com.jly.garfieldprojects.ui.QqHeaderActivity;
 import com.jly.garfieldprojects.ui.design.NavigationViewActivity;
 import com.jly.garfieldprojects.ui.design.SideslipActivity;
 import com.jly.garfieldprojects.ui.design.SnackBarViewsActivity;
+import com.jly.garfieldprojects.ui.drawable.DrawableActivity;
 import com.jly.garfieldprojects.ui.popupwindow.PopupWindowActivity;
+import com.jly.garfieldprojects.ui.refreshlistview.RefreshListViewActivity;
 import com.jly.garfieldprojects.ui.timeselector.TimeSelectorActivity;
 import com.jly.garfieldprojects.ui.timeselector.TimeSelectorActivity1;
 import com.jly.garfieldprojects.ui.viewpager.ChangeableViewpagerActivity;
@@ -53,7 +54,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ((Button)findViewById(R.id.DrawableActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.LayoutInflaterActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.GridLayoutActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.RefreshListViewActivityBtn)).setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View v) {
@@ -99,6 +102,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.GridLayoutActivityBtn:
                 startActivity(new Intent(MainActivity.this, GridLayoutActivity.class));
+                break;
+            case R.id.RefreshListViewActivityBtn:
+                startActivity(new Intent(MainActivity.this, RefreshListViewActivity.class));
                 break;
         }
     }
