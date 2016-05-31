@@ -14,6 +14,7 @@ import com.jly.garfieldprojects.ui.DeleteListViewItemActivity;
 import com.jly.garfieldprojects.ui.EditTextActivity;
 import com.jly.garfieldprojects.ui.GridLayoutActivity;
 import com.jly.garfieldprojects.ui.LayoutInflaterActivity;
+import com.jly.garfieldprojects.ui.ProgressBarActivity;
 import com.jly.garfieldprojects.ui.QqHeaderActivity;
 import com.jly.garfieldprojects.ui.design.NavigationViewActivity;
 import com.jly.garfieldprojects.ui.design.SideslipActivity;
@@ -24,6 +25,7 @@ import com.jly.garfieldprojects.ui.refreshlistview.RefreshListViewActivity;
 import com.jly.garfieldprojects.ui.timeselector.TimeSelectorActivity;
 import com.jly.garfieldprojects.ui.timeselector.TimeSelectorActivity1;
 import com.jly.garfieldprojects.ui.viewpager.ChangeableViewpagerActivity;
+import com.jly.garfieldprojects.ui.webview.WebViewActivity;
 
 public class MainActivity extends Activity implements View.OnClickListener {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -37,6 +39,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         //每个应用程序最高可用内存是 128M
         int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);
         Log.d(TAG, "Max memory is " + maxMemory + "KB");
+
+        GarfieldApplication.getInstance().addActivity(this);
     }
 
     private void initView(){
@@ -55,6 +59,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ((Button)findViewById(R.id.LayoutInflaterActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.GridLayoutActivityBtn)).setOnClickListener(this);
         ((Button)findViewById(R.id.RefreshListViewActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.WebViewActivityBtn)).setOnClickListener(this);
+        ((Button)findViewById(R.id.ProgressBarActivityBtn)).setOnClickListener(this);
     }
 
 
@@ -105,6 +111,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.RefreshListViewActivityBtn:
                 startActivity(new Intent(MainActivity.this, RefreshListViewActivity.class));
+                break;
+            case R.id.WebViewActivityBtn:
+                startActivity(new Intent(MainActivity.this, WebViewActivity.class));
+                break;
+            case R.id.ProgressBarActivityBtn:
+                startActivity(new Intent(MainActivity.this, ProgressBarActivity.class));
                 break;
         }
     }

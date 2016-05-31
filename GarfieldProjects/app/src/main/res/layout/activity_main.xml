@@ -111,5 +111,19 @@
             android:layout_height="wrap_content"
             android:text="RefreshListViewActivity"
             android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/WebViewActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WebViewActivity"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/ProgressBarActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ProgressBarActivity"
+            android:layout_marginTop="5dp"/>
     </LinearLayout>
 </ScrollView>

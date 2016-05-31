@@ -3,9 +3,11 @@ package com.jly.garfieldprojects.ui;//**
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
+import com.jly.garfieldprojects.GarfieldApplication;
 import com.jly.garfieldprojects.R;
 
 import java.util.ArrayList;
@@ -26,6 +28,8 @@ public class QqHeaderActivity extends Activity {
         setContentView(R.layout.activity_qqheader);
 
         initViews();
+
+        GarfieldApplication.getInstance().addActivity(this);
     }
 
     private void initViews(){
@@ -37,5 +41,12 @@ public class QqHeaderActivity extends Activity {
         bitmaps.add(((BitmapDrawable) getResources().getDrawable(R.mipmap.ic_launcher)).getBitmap());
         bitmaps.add(((BitmapDrawable) getResources().getDrawable(R.mipmap.ic_launcher)).getBitmap());
         mCircularImageView.setImageBitmaps(bitmaps);
+
+        ((Button)findViewById(R.id.exitBtn)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GarfieldApplication.getInstance().exit();
+            }
+        });
     }
 }
