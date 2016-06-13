@@ -28,4 +28,5 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile 'com.zhy:magic-viewpager:1.0.1'
     compile 'com.jakewharton:butterknife:8.0.1'
+    compile files('libs/universal-image-loader-1.9.3.jar')
 }

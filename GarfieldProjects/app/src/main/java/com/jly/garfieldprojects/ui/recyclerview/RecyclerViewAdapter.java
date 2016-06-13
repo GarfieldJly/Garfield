@@ -5,12 +5,17 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jly.garfieldprojects.R;
+import com.jly.garfieldprojects.constant.AppConstant;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Administrator on 2016/6/12.
@@ -23,13 +28,27 @@ import java.util.List;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
     private Context mContext;
     private ArrayList<String> mDataList;
-    private ArrayList heights;
+//    private ArrayList heights;
     private OnClickListener mOnClickListener;
+    private DisplayImageOptions options;
+    private Random mRandom;
 
     public RecyclerViewAdapter(Context context, ArrayList<String> dataList) {
         mContext = context;
         mDataList = dataList;
-        getRandomHeight(mDataList);
+//        getRandomHeight(mDataList);
+
+        options = new DisplayImageOptions.Builder()
+                .showImageOnLoading(R.drawable.ic_stub)
+                .showImageForEmptyUri(R.drawable.ic_empty)
+                .showImageOnFail(R.drawable.ic_error)
+                .cacheInMemory(true)
+                .cacheOnDisk(true)
+                .considerExifParams(true)
+                .displayer(new RoundedBitmapDisplayer(20))
+                .build();
+
+        mRandom = new Random();
     }
 
     public void setOnClickListener(OnClickListener onClickListener) {
@@ -51,9 +70,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 //        holder.itemView.setLayoutParams(params);//把params设置给itemView布局
 
 
-        ViewGroup.LayoutParams lp = holder.tv.getLayoutParams();
-        lp.height = (int) heights.get(position);
-        holder.tv.setLayoutParams(lp);
+//        ViewGroup.LayoutParams lp = holder.tv.getLayoutParams();
+//        lp.height = (int) heights.get(position);
+//        holder.tv.setLayoutParams(lp);
 
         holder.tv.setText(mDataList.get(position));
 //        if(position == 5){
@@ -61,6 +80,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 //        }else{
 //            holder.iv.setImageResource(R.mipmap.ic_launcher);
 //        }
+
+        int length = AppConstant.images.length;
+        int index = mRandom.nextInt(length);
+
+        ImageLoader.getInstance().displayImage("http://img0.imgtn.bdimg.com/it/u=2596167089,3414172685&fm=11&gp=0.jpg",holder.iv,options);
 
         if(mOnClickListener != null){
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -90,12 +114,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         notifyItemRemoved(position);
     }
 
-    private void getRandomHeight(List<String> lists){//得到随机item的高度
-        heights = new ArrayList<>();
-        for (int i = 0; i < lists.size(); i++) {
-            heights.add((int)(200+Math.random()*400));
-        }
-    }
+//    private void getRandomHeight(List<String> lists){//得到随机item的高度
+//        heights = new ArrayList<>();
+//        for (int i = 0; i < lists.size(); i++) {
+//            heights.add((int)(200+Math.random()*400));
+//        }
+//    }
 
     @Override
     public int getItemCount() {
@@ -104,13 +128,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     class MyViewHolder extends RecyclerView.ViewHolder{
         TextView tv;
-//        ImageView iv;
+        ImageView iv;
 
 
         public MyViewHolder(View itemView) {
             super(itemView);
             this.tv = (TextView) itemView.findViewById(R.id.content_tv);
-//            this.iv = (ImageView) itemView.findViewById(R.id.content_iv);
+            this.iv = (ImageView) itemView.findViewById(R.id.content_iv);
         }
     }
 
