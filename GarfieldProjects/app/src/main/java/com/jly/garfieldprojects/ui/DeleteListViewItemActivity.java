@@ -19,11 +19,9 @@ import android.widget.RelativeLayout;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.jly.garfieldprojects.Entity.ItemEntity;
 import com.jly.garfieldprojects.R;
 import com.jly.garfieldprojects.adapter.DeleteItemAdapter;
-
 import java.util.ArrayList;
 import java.util.List;
 

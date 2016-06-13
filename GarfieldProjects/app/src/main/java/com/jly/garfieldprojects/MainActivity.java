@@ -19,6 +19,8 @@ import com.jly.garfieldprojects.ui.design.SnackBarViewsActivity;
 import com.jly.garfieldprojects.ui.drawable.DrawableActivity;
 import com.jly.garfieldprojects.ui.drawable.TestDrawableActivity;
 import com.jly.garfieldprojects.ui.popupwindow.PopupWindowActivity;
+import com.jly.garfieldprojects.ui.recyclerview.RecyclerViewActivity;
+import com.jly.garfieldprojects.ui.recyclerview.RecyclerViewTestActivity;
 import com.jly.garfieldprojects.ui.refreshlistview.RefreshListViewActivity;
 import com.jly.garfieldprojects.ui.timeselector.TimeSelectorActivity;
 import com.jly.garfieldprojects.ui.timeselector.TimeSelectorActivity1;
@@ -53,6 +55,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button WebViewActivityBtn;
     private Button ProgressBarActivityBtn;
     private Button TestDrawableActivityBtn;
+    private Button RecyclerViewActivityBtn;
+    private Button RecyclerViewTestActivityBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +104,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         WebViewActivityBtn.setOnClickListener(this);
         ProgressBarActivityBtn.setOnClickListener(this);
         TestDrawableActivityBtn.setOnClickListener(this);
+        RecyclerViewActivityBtn = (Button) findViewById(R.id.RecyclerViewActivityBtn);
+        RecyclerViewActivityBtn.setOnClickListener(this);
+        RecyclerViewTestActivityBtn= (Button) findViewById(R.id.RecyclerViewTestActivityBtn);
+        RecyclerViewTestActivityBtn.setOnClickListener(this);
     }
 
     @Override
@@ -158,6 +166,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.TestDrawableActivityBtn:
                 startActivity(new Intent(this, TestDrawableActivity.class));
+                break;
+            case R.id.RecyclerViewActivityBtn:
+                startActivity(new Intent(this, RecyclerViewActivity.class));
+                break;
+            case R.id.RecyclerViewTestActivityBtn:
+                startActivity(new Intent(this, RecyclerViewTestActivity.class));
                 break;
         }
     }

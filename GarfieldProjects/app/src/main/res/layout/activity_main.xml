@@ -132,5 +132,20 @@
             android:layout_height="wrap_content"
             android:text="TestDrawableActivity"
             android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/RecyclerViewActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RecyclerViewActivity"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/RecyclerViewTestActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RecyclerViewTestActivity"
+            android:layout_marginTop="5dp"/>
+
     </LinearLayout>
 </ScrollView>

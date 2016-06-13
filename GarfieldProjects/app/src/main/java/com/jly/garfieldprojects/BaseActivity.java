@@ -17,4 +17,6 @@ public class BaseActivity extends Activity {
     public <E extends View> E getView(int resId) {
         return ViewUtils.findViewById(this, resId);
     }
+
+
 }
