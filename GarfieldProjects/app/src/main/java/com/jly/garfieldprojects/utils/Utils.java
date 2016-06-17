@@ -1,5 +1,6 @@
 package com.jly.garfieldprojects.utils;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -23,5 +24,13 @@ public class Utils {
             p.setMargins(l, t, r, b);
             v.requestLayout();
         }
+    }
+
+    /**
+     * 独立像素转像素
+     */
+    public static int dip2px(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
     }
 }

@@ -8,6 +8,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <!--跑马灯，TextView 一直循环跑-->
+       <!-- <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="adfefsdfsfefdfewfsdfdfaefssfefsadfe"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_margin="10dp"
+            android:focusableInTouchMode="true"/>-->
     <Button
         android:id="@+id/QqHeaderActivityBtn"
         android:layout_width="wrap_content"
@@ -147,5 +159,29 @@
             android:text="RecyclerViewTestActivity"
             android:layout_marginTop="5dp"/>
 
+         <com.jly.garfieldprojects.widget.MarqueeTextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="adfefsdfsfefdfewfsdfdfaefssfefsadfe"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_margin="10dp"
+            android:focusableInTouchMode="true"/>
+
+        <Button
+            android:id="@+id/FlowLayoutActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FlowLayoutActivity"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/MoveViewActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MoveViewActivity"
+            android:layout_marginTop="5dp"/>
     </LinearLayout>
 </ScrollView>

@@ -47,6 +47,9 @@
         <activity android:name=".ui.recyclerview.RecyclerViewActivity"/>
         <activity android:name=".ui.recyclerview.RecyclerViewTestActivity"
             android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name=".ui.FlowLayoutActivity"/>
+        <activity android:name=".ui.MoveViewActivity"
+            android:launchMode="singleTask"/>
     </application>
 
 </manifest>

@@ -40,6 +40,11 @@ public class MediaplayerActivity extends BaseActivity implements View.OnClickLis
         initViews();
     }
 
+    @Override
+    public void setupView() {
+
+    }
+
     private void initViews() {
         mList = getSongs();
         if(mList == null || mList.size() == 0){

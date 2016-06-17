@@ -12,7 +12,7 @@ public class AppConstant {
     public static final String IMAGES = "CONSTANTS.IMAGES";
     public static final String IMAGE_POSITION = "CONSTANTS.IMAGE_POSITION";
 
-    public static final String[] images = new String[] {
+    public static final String[] images = new String[]{
             "http://cdn.duitang.com/uploads/blog/201308/18/20130818150526_Ru2Bk.thumb.600_0.png",
             "http://www.bkill.com/u/info_img/2012-09/02/2012083116140522302.jpg",
             "http://www.it165.net/uploadfile/2011/1218/20111218070928328.jpg",
@@ -120,4 +120,9 @@ public class AppConstant {
             "http://www.qqbody.com/uploads/allimg/201302/20-143539_945.jpg",
             "http://www.qqgqtx.com/uploads/allimg/130326/1-1303261A329-51.jpg",
     };
+
+    // 女生标签
+    public static final String[] girlLabel = new String[]{"白富美", "绿茶婊", "萝莉", "八卦女王", "大胸妹", "大长腿", "小短腿跑得快", "屌丝", "有钱任性", "土豪", "开朗乐观", "幽默风趣", "完美主义",
+            "三分钟热度", "好人", "没心没肺", "卖萌可耻", "纠结症晚期", "单身狗", "加班狂人", "点赞狂人", "2b青年", "星座达人", "你妹", "月光族", "大叔控", "萝莉控", "二货", "no zuo no die", "小清新",
+            "you can you up no can no bebe"};
 }

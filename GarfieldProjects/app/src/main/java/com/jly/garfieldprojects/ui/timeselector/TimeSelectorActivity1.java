@@ -38,6 +38,11 @@ public class TimeSelectorActivity1 extends BaseActivity {
         init();
     }
 
+    @Override
+    public void setupView() {
+
+    }
+
     private void init() {
         timeRl = (RelativeLayout) findViewById(R.id.timeRl);
         timeTv = (TextView) findViewById(R.id.timeTv);

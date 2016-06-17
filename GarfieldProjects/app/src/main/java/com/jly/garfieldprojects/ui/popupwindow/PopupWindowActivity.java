@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 
 import com.jly.garfieldprojects.R;
@@ -36,8 +38,15 @@ public class PopupWindowActivity extends Activity {
             @Override
             public void onClick(View v) {
                 titlePopup.show(v);
+                //背景变暗
+                WindowManager.LayoutParams layoutParams = getWindow().getAttributes();
+                layoutParams.alpha = 0.7f;
+                getWindow().setAttributes(layoutParams);
+
             }
         });
+
+
     }
 
     private void initPopWindow(Context context) {
@@ -47,6 +56,17 @@ public class PopupWindowActivity extends Activity {
         // 给标题栏弹窗添加子类
         titlePopup.addAction(new ActionItem(context, "发起群聊"));
         titlePopup.addAction(new ActionItem(context, "添加朋友"));
+
+        //监听消失的接口
+        titlePopup.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                // 设置背景恢复，不再变暗
+                WindowManager.LayoutParams lp = getWindow().getAttributes();
+                lp.alpha = 1.0f;
+                getWindow().setAttributes(lp);
+            }
+        });
 
     }
 

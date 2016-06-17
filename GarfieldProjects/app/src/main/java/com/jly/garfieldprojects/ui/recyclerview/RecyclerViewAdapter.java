@@ -84,7 +84,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         int length = AppConstant.images.length;
         int index = mRandom.nextInt(length);
 
-        ImageLoader.getInstance().displayImage("http://img0.imgtn.bdimg.com/it/u=2596167089,3414172685&fm=11&gp=0.jpg",holder.iv,options);
+        ImageLoader.getInstance().displayImage(AppConstant.images[index],holder.iv);
 
         if(mOnClickListener != null){
             holder.itemView.setOnClickListener(new View.OnClickListener() {

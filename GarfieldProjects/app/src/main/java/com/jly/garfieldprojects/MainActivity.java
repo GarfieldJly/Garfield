@@ -9,8 +9,10 @@ import android.widget.Button;
 import com.jly.garfieldprojects.mediaplayer.MediaplayerActivity;
 import com.jly.garfieldprojects.ui.DeleteListViewItemActivity;
 import com.jly.garfieldprojects.ui.EditTextActivity;
+import com.jly.garfieldprojects.ui.FlowLayoutActivity;
 import com.jly.garfieldprojects.ui.GridLayoutActivity;
 import com.jly.garfieldprojects.ui.LayoutInflaterActivity;
+import com.jly.garfieldprojects.ui.MoveViewActivity;
 import com.jly.garfieldprojects.ui.ProgressBarActivity;
 import com.jly.garfieldprojects.ui.QqHeaderActivity;
 import com.jly.garfieldprojects.ui.design.NavigationViewActivity;
@@ -57,6 +59,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button TestDrawableActivityBtn;
     private Button RecyclerViewActivityBtn;
     private Button RecyclerViewTestActivityBtn;
+    private Button FlowLayoutActivityBtn;
+    private Button MoveViewActivityBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,8 +110,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         TestDrawableActivityBtn.setOnClickListener(this);
         RecyclerViewActivityBtn = (Button) findViewById(R.id.RecyclerViewActivityBtn);
         RecyclerViewActivityBtn.setOnClickListener(this);
-        RecyclerViewTestActivityBtn= (Button) findViewById(R.id.RecyclerViewTestActivityBtn);
+        RecyclerViewTestActivityBtn = (Button) findViewById(R.id.RecyclerViewTestActivityBtn);
         RecyclerViewTestActivityBtn.setOnClickListener(this);
+        FlowLayoutActivityBtn = (Button) findViewById(R.id.FlowLayoutActivityBtn);
+        FlowLayoutActivityBtn.setOnClickListener(this);
+        MoveViewActivityBtn = (Button) findViewById(R.id.MoveViewActivityBtn);
+        MoveViewActivityBtn.setOnClickListener(this);
     }
 
     @Override
@@ -172,6 +180,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.RecyclerViewTestActivityBtn:
                 startActivity(new Intent(this, RecyclerViewTestActivity.class));
+                break;
+            case R.id.FlowLayoutActivityBtn:
+                startActivity(new Intent(this, FlowLayoutActivity.class));
+                break;
+            case R.id.MoveViewActivityBtn:
+                startActivity(new Intent(this, MoveViewActivity.class));
                 break;
         }
     }

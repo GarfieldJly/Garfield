@@ -2,8 +2,8 @@ package com.jly.garfieldprojects.ui.recyclerview;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.widget.Toast;
 
@@ -35,13 +35,13 @@ public class RecyclerViewActivity extends Activity {
         initData();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mRecyclerViewAdapter = new RecyclerViewAdapter(this,mList);
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
-//        recyclerView.addItemDecoration(new DividerGridItemDecoration(this));
+//        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
+        recyclerView.addItemDecoration(new DividerGridItemDecoration(this));
 //        recyclerView.addItemDecoration(new SpaceItemDecoration(5,5));
 //        recyclerView.addItemDecoration(new MyItemDecoration(this));
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 //        recyclerView.setLayoutManager(new GridLayoutManager(this,3));
-//        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.HORIZONTAL));
         recyclerView.setAdapter(mRecyclerViewAdapter);
         mRecyclerViewAdapter.setOnClickListener(new RecyclerViewAdapter.OnClickListener() {
             @Override
