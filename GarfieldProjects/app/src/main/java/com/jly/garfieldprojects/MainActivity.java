@@ -13,7 +13,6 @@ import com.jly.garfieldprojects.ui.FlowLayoutActivity;
 import com.jly.garfieldprojects.ui.GridLayoutActivity;
 import com.jly.garfieldprojects.ui.LayoutInflaterActivity;
 import com.jly.garfieldprojects.ui.MoveViewActivity;
-import com.jly.garfieldprojects.ui.ProgressBarActivity;
 import com.jly.garfieldprojects.ui.QqHeaderActivity;
 import com.jly.garfieldprojects.ui.design.NavigationViewActivity;
 import com.jly.garfieldprojects.ui.design.SideslipActivity;
@@ -21,6 +20,7 @@ import com.jly.garfieldprojects.ui.design.SnackBarViewsActivity;
 import com.jly.garfieldprojects.ui.drawable.DrawableActivity;
 import com.jly.garfieldprojects.ui.drawable.TestDrawableActivity;
 import com.jly.garfieldprojects.ui.popupwindow.PopupWindowActivity;
+import com.jly.garfieldprojects.ui.progressbar.ProgressBarTestActivity;
 import com.jly.garfieldprojects.ui.recyclerview.RecyclerViewActivity;
 import com.jly.garfieldprojects.ui.recyclerview.RecyclerViewTestActivity;
 import com.jly.garfieldprojects.ui.refreshlistview.RefreshListViewActivity;
@@ -170,7 +170,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(new Intent(this, WebViewActivity.class));
                 break;
             case R.id.ProgressBarActivityBtn:
-                startActivity(new Intent(this, ProgressBarActivity.class));
+                startActivity(new Intent(this, ProgressBarTestActivity.class));
                 break;
             case R.id.TestDrawableActivityBtn:
                 startActivity(new Intent(this, TestDrawableActivity.class));

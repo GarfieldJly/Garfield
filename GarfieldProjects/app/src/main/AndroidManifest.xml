@@ -50,6 +50,8 @@
         <activity android:name=".ui.FlowLayoutActivity"/>
         <activity android:name=".ui.MoveViewActivity"
             android:launchMode="singleTask"/>
+        <activity android:name=".ui.progressbar.ProgressBarTestActivity"
+            android:theme="@style/MyDialogStyle"/>
     </application>
 
 </manifest>
