@@ -1,12 +1,18 @@
 package com.jly.garfieldprojects;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.IBinder;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.jly.garfieldprojects.mediaplayer.MediaplayerActivity;
+import com.jly.garfieldprojects.service.CountNumService;
 import com.jly.garfieldprojects.ui.DeleteListViewItemActivity;
 import com.jly.garfieldprojects.ui.EditTextActivity;
 import com.jly.garfieldprojects.ui.FlowLayoutActivity;
@@ -38,6 +44,7 @@ import com.jly.garfieldprojects.ui.webview.WebViewActivity;
  * @description: ${TODO}(用一句话描述该文件做什么)
  */
 public class MainActivity extends Activity implements View.OnClickListener {
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     private Button QqHeaderActivityBtn;
     private Button EditTextActivityBtn;
@@ -61,6 +68,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button RecyclerViewTestActivityBtn;
     private Button FlowLayoutActivityBtn;
     private Button MoveViewActivityBtn;
+    private Button StartServiceBtn;
+    private Button StopServiceBtn;
+    private Button BindServiceBtn;
+    private Button unBindServiceBtn;
+
+    private CountNumService mCountNumService;
+    private ServiceConnection sc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,7 +130,33 @@ public class MainActivity extends Activity implements View.OnClickListener {
         FlowLayoutActivityBtn.setOnClickListener(this);
         MoveViewActivityBtn = (Button) findViewById(R.id.MoveViewActivityBtn);
         MoveViewActivityBtn.setOnClickListener(this);
+        StartServiceBtn = (Button) findViewById(R.id.StartServiceBtn);
+        StartServiceBtn.setOnClickListener(this);
+        StopServiceBtn = (Button) findViewById(R.id.StopServiceBtn);
+        StopServiceBtn.setOnClickListener(this);
+        BindServiceBtn = (Button) findViewById(R.id.BindServiceBtn);
+        BindServiceBtn.setOnClickListener(this);
+        unBindServiceBtn = (Button) findViewById(R.id.unBindServiceBtn);
+        unBindServiceBtn.setOnClickListener(this);
+
+        sc = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder service) {
+                mCountNumService = ((CountNumService.CountService)service).getService();
+                Log.i(TAG,"调用 onServiceConnected");
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+                Log.i(TAG,"调用 onServiceDisconnected");
+            }
+        };
+
+
     }
+
+
+    Intent serviceIntent;
 
     @Override
     public void onClick(View v) {
@@ -185,8 +225,38 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(new Intent(this, FlowLayoutActivity.class));
                 break;
             case R.id.MoveViewActivityBtn:
-                startActivity(new Intent(this, MoveViewActivity.class));
+                Intent moveIntent = new Intent(this, MoveViewActivity.class);
+                moveIntent.putExtra("move", "test move");
+                startActivityForResult(moveIntent, 0);
+                break;
+            case R.id.StartServiceBtn:
+                serviceIntent = new Intent(MainActivity.this, CountNumService.class);
+//                serviceIntent.putExtra("type","op1");
+                startService(serviceIntent);
+                break;
+            case R.id.StopServiceBtn:
+                stopService(serviceIntent);
+                break;
+            case R.id.BindServiceBtn:
+                bindService(new Intent(MainActivity.this, CountNumService.class),sc, Context.BIND_AUTO_CREATE);
+                break;
+            case R.id.unBindServiceBtn:
+                unbindService(sc);
                 break;
         }
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        Log.i(TAG, "测试  onActivityResult ===requestCode" + requestCode + ";;;resultCode ==" + resultCode);
+
+        if (requestCode == 0) {
+            String value = data.getStringExtra("back");
+            Log.i(TAG, "测试  value ===" + value);
+        }
+
     }
 }

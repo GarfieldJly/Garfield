@@ -183,5 +183,33 @@
             android:layout_height="wrap_content"
             android:text="MoveViewActivity"
             android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/StartServiceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="StartServiceBtn"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/StopServiceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="StopServiceBtn"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/BindServiceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BindServiceBtn"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/unBindServiceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="unBindServiceBtn"
+            android:layout_marginTop="5dp"/>
     </LinearLayout>
 </ScrollView>

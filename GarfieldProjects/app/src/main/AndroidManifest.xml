@@ -48,10 +48,13 @@
         <activity android:name=".ui.recyclerview.RecyclerViewTestActivity"
             android:configChanges="orientation|keyboardHidden"/>
         <activity android:name=".ui.FlowLayoutActivity"/>
-        <activity android:name=".ui.MoveViewActivity"
-            android:launchMode="singleTask"/>
+        <activity android:name=".ui.MoveViewActivity"/>
         <activity android:name=".ui.progressbar.ProgressBarTestActivity"
             android:theme="@style/MyDialogStyle"/>
+
+        <service android:name=".service.CountNumService"/>
+
+        <receiver android:name=".broadcast.CountNumReceiver"/>
     </application>
 
 </manifest>
