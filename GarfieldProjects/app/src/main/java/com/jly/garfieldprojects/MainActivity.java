@@ -83,7 +83,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         initView();
     }
 
-
     private void initView() {
         QqHeaderActivityBtn = (Button) findViewById(R.id.QqHeaderActivityBtn);
         EditTextActivityBtn = (Button) findViewById(R.id.EditTextActivityBtn);
@@ -151,8 +150,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Log.i(TAG,"调用 onServiceDisconnected");
             }
         };
-
-
     }
 
 
