@@ -72,6 +72,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button StopServiceBtn;
     private Button BindServiceBtn;
     private Button unBindServiceBtn;
+    private Button showBtn;
 
     private CountNumService mCountNumService;
     private ServiceConnection sc;
@@ -102,6 +103,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         WebViewActivityBtn = (Button) findViewById(R.id.WebViewActivityBtn);
         ProgressBarActivityBtn = (Button) findViewById(R.id.ProgressBarActivityBtn);
         TestDrawableActivityBtn = (Button) findViewById(R.id.TestDrawableActivityBtn);
+        showBtn = (Button) findViewById(R.id.showBtn);
 
         QqHeaderActivityBtn.setOnClickListener(this);
         EditTextActivityBtn.setOnClickListener(this);
@@ -137,6 +139,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         BindServiceBtn.setOnClickListener(this);
         unBindServiceBtn = (Button) findViewById(R.id.unBindServiceBtn);
         unBindServiceBtn.setOnClickListener(this);
+        showBtn.setOnClickListener(this);
 
         sc = new ServiceConnection() {
             @Override
@@ -239,6 +242,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.unBindServiceBtn:
                 unbindService(sc);
+                break;
+            case R.id.showBtn:
                 break;
         }
     }
